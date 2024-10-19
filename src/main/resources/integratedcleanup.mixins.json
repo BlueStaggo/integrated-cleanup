@@ -12,9 +12,8 @@
     "entity.AnimalBreedGoalMixin",
     "entity.AnimalEntityMixin",
     "entity.ChickenEntityMixin",
-    "entity.EntityMixin",
     "entity.GhastEntityMixin",
-    "entity.LivingEntityMixin",
+    "entity.MobEntityMixin",
     "entity.ServerPlayerEntityMixin",
     "item.EnderEyeItemMixin",
     "server.MinecraftServerAccessor",
@@ -26,7 +25,6 @@
   ],
   "client": [
     "client.ClientNetworkHandlerMixin",
-    "client.ClientPlayerInteractionManagerMixin",
     "client.DownloadingTerrainScreenMixin",
     "client.MinecraftMixin",
     "client.WorldRendererMixin",

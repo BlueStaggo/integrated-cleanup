@@ -40,7 +40,7 @@ public final class IntegratedCleanup {
 
 			ServerWorld world = server.worlds[i];
 			((MinecraftServerAccessor) server).getPlayerManager()
-				.sendPacket(new WorldTimePacket(world.getTime(), world.getTimeOfDay()), world.dimension.id);
+				.sendPacket(new WorldTimePacket(world.getTime(), world.getTimeOfDay(), world.getGameRules().getBoolean("doDaylightCycle")), world.dimension.id);
 		}
 	}
 

@@ -21,7 +21,7 @@ public abstract class LocalClientPlayerEntityMixin extends InputClientPlayerEnti
 		method = "damage",
 		at = @At("HEAD")
 	)
-	public void damageWithFlashingHearts(DamageSource source, int amount, CallbackInfoReturnable<Boolean> cir) {
-		this.prevHealth = this.getHealth() + amount;
+	public void damageWithFlashingHearts(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
+		this.lastHealth = this.getHealth() + amount;
 	}
 }

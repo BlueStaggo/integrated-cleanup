@@ -49,16 +49,6 @@ public abstract class LivingEntityMixin extends Entity {
 		this.headYaw += (this.targetHeadYaw - this.headYaw) * 0.5f;
 	}
 
-	@Inject(
-		method = "doSpawnEffects",
-		at = @At("HEAD"),
-		cancellable = true
-	)
-	public void doFixedSpawnEffects(CallbackInfo ci) {
-		IntegratedCleanup.sendVisualEntityEvent(this, IntegratedCleanup.VISUAL_ENTITY_EVENT_SPAWNER_POOF);
-		ci.cancel();
-	}
-
 	@Override
 	public void integratedCleanup$doVisualEntityEvent(byte event) {
 		if (event == IntegratedCleanup.VISUAL_ENTITY_EVENT_SPAWNER_POOF) {
