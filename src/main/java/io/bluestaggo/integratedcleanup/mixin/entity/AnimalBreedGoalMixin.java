@@ -15,7 +15,7 @@ public abstract class AnimalBreedGoalMixin extends Goal {
 
 	@ModifyConstant(
 		method = "breed",
-		constant = @Constant(intValue = 7)
+		constant = @Constant(intValue = 7, ordinal = 0)
 	)
 	public int fixedBreedingHearts(int constant) {
 		IntegratedCleanup.sendVisualEntityEvent(this.animal, IntegratedCleanup.VISUAL_ENTITY_EVENT_ANIMAL_BREED);

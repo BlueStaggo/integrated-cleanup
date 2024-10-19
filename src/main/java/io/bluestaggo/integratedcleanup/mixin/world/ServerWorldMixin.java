@@ -26,11 +26,9 @@ public abstract class ServerWorldMixin extends World {
 		super(storage, name, dimension, settings, profiler);
 	}
 
-	@Inject(
-		method = "changeTime",
-		at = @At("TAIL")
-	)
-	public void changeTimeInstantly(long time, CallbackInfo ci) {
+	@Override
+	public void setTimeOfDay(long time) {
+		super.setTimeOfDay(time);
 		IntegratedCleanup.syncServerTime(this.server);
 	}
 
