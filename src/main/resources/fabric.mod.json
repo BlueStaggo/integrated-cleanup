@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "integratedcleanup",
+	"version": "${version}",
+	"name": "Integrated Cleanup",
+	"description": "Minor bug fixes for multiplayer in old versions of Minecraft",
+	"authors": [
+		"BlueStaggo"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/integrated-cleanup",
+		"sources": "https://github.com/BlueStaggo/integrated-cleanup"
+	},
+	"license": "MIT",
+	"icon": "assets/integratedcleanup/icon.png",
+	"environment": "*",
+	"entrypoints": {
+	},
+	"mixins": [
+		"integratedcleanup.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "1.3.2"
+	},
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/unmapped/C_0539808": ["io/bluestaggo/integratedcleanup/extensions/IntegratedCleanupEntity"]
+    }
+  }
+}

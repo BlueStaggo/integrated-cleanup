@@ -1,0 +1,42 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.bluestaggo.integratedcleanup.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "block.DragonEggBlockMixin",
+    "block.LiquidBlockMixin",
+    "block.PumpkinBlockMixin",
+    "block.RedstoneTorchBlockMixin",
+    "entity.AnimalBreedGoalMixin",
+    "entity.AnimalEntityMixin",
+    "entity.ChickenEntityMixin",
+    "entity.EntityMixin",
+    "entity.GhastEntityMixin",
+    "entity.LivingEntityMixin",
+    "entity.ServerPlayerEntityMixin",
+    "item.EnderEyeItemMixin",
+    "server.MinecraftServerAccessor",
+    "server.MinecraftServerMixin",
+    "server.PlayerManagerMixin",
+    "world.ServerWorldEventListenerMixin",
+    "world.ServerWorldMixin",
+    "world.WorldAccessor"
+  ],
+  "client": [
+    "client.ClientNetworkHandlerMixin",
+    "client.ClientPlayerInteractionManagerMixin",
+    "client.DownloadingTerrainScreenMixin",
+    "client.MinecraftMixin",
+    "client.WorldRendererMixin",
+    "entity.LocalClientPlayerEntityMixin",
+    "server.IntegratedPlayerManagerMixin",
+    "server.IntegratedServerMixin",
+    "world.ClientWorldMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
