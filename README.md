@@ -1,8 +1,8 @@
 # Integrated Cleanup
 
-Integrated Cleanup is an [Ornithe](https://ornithemc.net) mod that 
+Integrated Cleanup is an [Ornithe](https://ornithemc.net) mod for Minecraft versions 1.3 to 1.7 that fixes a bunch of multiplayer bugs to bring the game closer to the intended singleplayer experience.
 
-Integrated Cleanup can be used on servers too! Vanilla players will still be able to connect, but players with the mod will experience the full set of fixes in your server. Likewise, players with the mod can still play on vanilla server just fine, albeit with client-side tweaks only.
+Integrated Cleanup can be used on clients as well as servers: vanilla players will still be able to connect, but players with the mod will experience the full set of fixes in your server. Likewise, players with the mod can still play on vanilla server just fine, albeit with client-side tweaks only.
 
 ## List of Fixes
 
@@ -21,6 +21,8 @@ Fixes:
 - `(S)` Restored various particle effects
 - `(I)` Restored loading bar on world load
 - `(C)` Restored portal travel sound
+    - Plays before the loading screen before 1.7
+    - Plays after the loading screen in 1.7+
 - `(C)` Restored puffy ghast animation
     - `(S)` Slightly more accurate animation if the mod is installed on the server
 - `(S)` Thunder storms now correctly darken the sky
