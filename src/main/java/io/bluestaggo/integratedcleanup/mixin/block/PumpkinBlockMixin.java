@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(PumpkinBlock.class)
 public abstract class PumpkinBlockMixin extends HorizontalFacingBlock {
-	protected PumpkinBlockMixin(int i, int j, Material material) {
-		super(i, j, material);
+	protected PumpkinBlockMixin(int i, Material material) {
+		super(i, material);
 	}
 
 	@ModifyConstant(

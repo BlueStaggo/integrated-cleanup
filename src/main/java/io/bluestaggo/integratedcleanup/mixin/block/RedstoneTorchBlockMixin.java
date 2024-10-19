@@ -14,8 +14,8 @@ public abstract class RedstoneTorchBlockMixin extends TorchBlock {
 	@Shadow
 	protected abstract boolean shouldBurnOut(World world, int x, int y, int z, boolean logToggle);
 
-	protected RedstoneTorchBlockMixin(int id, int sprite) {
-		super(id, sprite);
+	protected RedstoneTorchBlockMixin(int id) {
+		super(id);
 	}
 
 	@Redirect(
