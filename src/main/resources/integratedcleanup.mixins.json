@@ -12,6 +12,7 @@
     "entity.AnimalBreedGoalMixin",
     "entity.AnimalEntityMixin",
     "entity.ChickenEntityMixin",
+    "entity.EntityMixin",
     "entity.GhastEntityMixin",
     "entity.MobEntityMixin",
     "entity.ServerPlayerEntityMixin",
