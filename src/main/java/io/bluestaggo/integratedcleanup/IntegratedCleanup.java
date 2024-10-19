@@ -4,7 +4,7 @@ import io.bluestaggo.integratedcleanup.extensions.IntegratedCleanupWorldEventLis
 import io.bluestaggo.integratedcleanup.mixin.server.MinecraftServerAccessor;
 import io.bluestaggo.integratedcleanup.mixin.world.WorldAccessor;
 import net.minecraft.entity.Entity;
-import net.minecraft.network.packet.WorldTimePacket;
+import net.minecraft.network.packet.s2c.play.WorldTimeS2CPacket;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
 
@@ -40,7 +40,7 @@ public final class IntegratedCleanup {
 
 			ServerWorld world = server.worlds[i];
 			((MinecraftServerAccessor) server).getPlayerManager()
-				.sendPacket(new WorldTimePacket(world.getTime(), world.getTimeOfDay(), world.getGameRules().getBoolean("doDaylightCycle")), world.dimension.id);
+				.sendPacket(new WorldTimeS2CPacket(world.getTime(), world.getTimeOfDay(), world.getGameRules().getBoolean("doDaylightCycle")), world.dimension.id);
 		}
 	}
 

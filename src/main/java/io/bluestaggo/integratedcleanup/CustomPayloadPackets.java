@@ -1,6 +1,6 @@
 package io.bluestaggo.integratedcleanup;
 
-import net.minecraft.network.packet.CustomPayloadPacket;
+import net.minecraft.network.packet.s2c.play.CustomPayloadS2CPacket;
 
 import java.nio.ByteBuffer;
 
@@ -8,8 +8,8 @@ public final class CustomPayloadPackets {
 	private CustomPayloadPackets() {
 	}
 
-	public static CustomPayloadPacket createKnockbackYaw(float value) {
-		return new CustomPayloadPacket(IntegratedCleanup.CUSTOM_PAYLOAD_KNOCKBACK_YAW,
+	public static CustomPayloadS2CPacket createKnockbackYaw(float value) {
+		return new CustomPayloadS2CPacket(IntegratedCleanup.CUSTOM_PAYLOAD_KNOCKBACK_YAW,
 			ByteBuffer.allocate(4).putFloat(value).array());
 	}
 
@@ -23,8 +23,8 @@ public final class CustomPayloadPackets {
 		public byte eventType;
 	}
 
-	public static CustomPayloadPacket createVisualEntityEvent(VisualEntityEvent value) {
-		return new CustomPayloadPacket(IntegratedCleanup.CUSTOM_PAYLOAD_VISUAL_ENTITY_EVENT,
+	public static CustomPayloadS2CPacket createVisualEntityEvent(VisualEntityEvent value) {
+		return new CustomPayloadS2CPacket(IntegratedCleanup.CUSTOM_PAYLOAD_VISUAL_ENTITY_EVENT,
 			ByteBuffer.allocate(5).putInt(value.entityId).put(value.eventType).array());
 	}
 

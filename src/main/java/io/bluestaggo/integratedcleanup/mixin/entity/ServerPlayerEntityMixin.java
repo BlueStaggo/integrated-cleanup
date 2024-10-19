@@ -1,10 +1,9 @@
 package io.bluestaggo.integratedcleanup.mixin.entity;
 
+import com.mojang.authlib.GameProfile;
 import io.bluestaggo.integratedcleanup.CustomPayloadPackets;
-import io.bluestaggo.integratedcleanup.IntegratedCleanup;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.living.player.PlayerEntity;
-import net.minecraft.network.packet.CustomPayloadPacket;
 import net.minecraft.server.entity.living.player.ServerPlayerEntity;
 import net.minecraft.server.network.handler.ServerPlayNetworkHandler;
 import net.minecraft.world.World;
@@ -13,14 +12,12 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-import java.nio.ByteBuffer;
-
 @Mixin(ServerPlayerEntity.class)
 public abstract class ServerPlayerEntityMixin extends PlayerEntity {
 	@Shadow public ServerPlayNetworkHandler networkHandler;
 
-	public ServerPlayerEntityMixin(World world, String name) {
-		super(world, name);
+	public ServerPlayerEntityMixin(World world, GameProfile profile) {
+		super(world, profile);
 	}
 
 	@Redirect(

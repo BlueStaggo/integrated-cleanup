@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LiquidBlock.class)
 public abstract class LiquidBlockMixin extends Block {
-	protected LiquidBlockMixin(int id, Material material) {
-		super(id, material);
+	protected LiquidBlockMixin(Material material) {
+		super(material);
 	}
 
 	@Inject(

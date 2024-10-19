@@ -17,7 +17,7 @@ public abstract class ServerWorldEventListenerMixin implements IntegratedCleanup
 	@Override
 	public void integratedCleanup$doVisualEntityEvent(Entity entity, byte event) {
 		CustomPayloadPackets.VisualEntityEvent visualEntityEvent = new CustomPayloadPackets.VisualEntityEvent();
-		visualEntityEvent.entityId = entity.networkId;
+		visualEntityEvent.entityId = entity.getNetworkId();
 		visualEntityEvent.eventType = event;
 
 		this.server.getPlayerManager().sendPacket(null, entity.x, entity.y, entity.z, 64.0, this.world.dimension.id,

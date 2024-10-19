@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(SkullBlock.class)
 public abstract class SkullBlockMixin extends BlockWithBlockEntity {
 	protected SkullBlockMixin(int i, Material material) {
-		super(i, material);
+		super(material);
 	}
 
 	@ModifyConstant(

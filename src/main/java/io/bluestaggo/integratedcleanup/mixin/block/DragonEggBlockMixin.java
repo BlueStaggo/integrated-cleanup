@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(DragonEggBlock.class)
 public abstract class DragonEggBlockMixin extends Block {
-	protected DragonEggBlockMixin(int id, Material material) {
-		super(id, material);
+	protected DragonEggBlockMixin(Material material) {
+		super(material);
 	}
 
 	@Redirect(

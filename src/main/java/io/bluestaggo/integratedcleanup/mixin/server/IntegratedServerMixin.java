@@ -6,14 +6,15 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
 import java.io.File;
+import java.net.Proxy;
 import java.util.Objects;
 
 @Mixin(IntegratedServer.class)
 public abstract class IntegratedServerMixin extends MinecraftServer {
 	@Unique private int logTicks = 0;
 
-	public IntegratedServerMixin(File gameDir) {
-		super(gameDir);
+	public IntegratedServerMixin(File gameDir, Proxy proxy) {
+		super(gameDir, proxy);
 	}
 
 	@Override

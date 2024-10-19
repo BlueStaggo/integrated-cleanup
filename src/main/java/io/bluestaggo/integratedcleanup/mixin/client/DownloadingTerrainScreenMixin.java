@@ -21,9 +21,4 @@ public abstract class DownloadingTerrainScreenMixin extends Screen {
 			this.minecraft.openScreen(null);
 		}
 	}
-
-	@Override
-	public boolean shouldPauseGame() {
-		return false;
-	}
 }

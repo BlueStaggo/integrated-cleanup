@@ -1,6 +1,6 @@
 package io.bluestaggo.integratedcleanup.mixin.server;
 
-import net.minecraft.network.packet.GameEventPacket;
+import net.minecraft.network.packet.s2c.play.GameEventS2CPacket;
 import net.minecraft.server.PlayerManager;
 import net.minecraft.server.entity.living.player.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -17,7 +17,7 @@ public abstract class PlayerManagerMixin {
 	)
 	public void sendExtraWorldInfo(ServerPlayerEntity player, ServerWorld world, CallbackInfo ci) {
 		if (world.isThundering()) {
-			player.networkHandler.sendPacket(new GameEventPacket(1, 1));
+			player.networkHandler.sendPacket(new GameEventS2CPacket(1, 1));
 		}
 	}
 }

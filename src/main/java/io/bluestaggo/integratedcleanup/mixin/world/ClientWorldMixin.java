@@ -1,7 +1,6 @@
 package io.bluestaggo.integratedcleanup.mixin.world;
 
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.util.ILogger;
 import net.minecraft.util.profiler.Profiler;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldSettings;
@@ -14,8 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ClientWorld.class)
 public abstract class ClientWorldMixin extends World {
-	public ClientWorldMixin(WorldStorage storage, String name, Dimension dimension, WorldSettings settings, Profiler profiler, ILogger logger) {
-		super(storage, name, dimension, settings, profiler, logger);
+	public ClientWorldMixin(WorldStorage storage, String name, Dimension dimension, WorldSettings settings, Profiler profiler) {
+		super(storage, name, dimension, settings, profiler);
 	}
 
 	@Inject(

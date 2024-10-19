@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(EnderEyeItem.class)
 public abstract class EnderEyeItemMixin extends Item {
-	protected EnderEyeItemMixin(int id) {
-		super(id);
+	protected EnderEyeItemMixin() {
+		super();
 	}
 
 	@ModifyConstant(
