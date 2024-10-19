@@ -8,6 +8,7 @@
     "block.LiquidBlockMixin",
     "block.PumpkinBlockMixin",
     "block.RedstoneTorchBlockMixin",
+    "block.SkullBlockMixin",
     "entity.AnimalBreedGoalMixin",
     "entity.AnimalEntityMixin",
     "entity.ChickenEntityMixin",
