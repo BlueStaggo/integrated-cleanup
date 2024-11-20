@@ -1,6 +1,8 @@
 package io.bluestaggo.integratedcleanup.mixin.entity;
 
 import io.bluestaggo.integratedcleanup.IntegratedCleanup;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.living.LivingEntity;
 import net.minecraft.world.World;
@@ -25,6 +27,7 @@ public abstract class LivingEntityMixin extends Entity {
 		at = @At("HEAD"),
 		cancellable = true
 	)
+	@Environment(EnvType.CLIENT)
 	public void setTargetHeadYaw(float headYaw, CallbackInfo ci) {
 		this.targetHeadYaw = headYaw;
 		ci.cancel();
