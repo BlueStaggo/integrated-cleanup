@@ -26,7 +26,6 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	ploceus.addCommonLibraries()
-	ploceus.dependOsl(project.osl_version)
 }
 
 processResources {
